@@ -15,4 +15,4 @@ class DBMutex(models.Model):
     creation_time = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        app_label = "db_mutex"
+        app_label = 'db_mutex'

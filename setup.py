@@ -1,8 +1,10 @@
-# import multiprocessing to avoid this bug (http://bugs.python.org/issue15881#msg170215)
-import multiprocessing
-assert multiprocessing
 import re
+import multiprocessing
 from setuptools import setup, find_packages
+
+
+# import multiprocessing to avoid this bug (http://bugs.python.org/issue15881#msg170215)
+assert multiprocessing
 
 
 def get_version():
@@ -36,6 +38,7 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 1.7',
         'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.9',
     ],
     license='MIT',
     install_requires=[
