@@ -11,7 +11,7 @@ class DBMutex(models.Model):
     :type creation_time: datetime
     :param creation_time: The creation time of the mutex lock
     """
-    lock_id = models.CharField(max_length=255, unique=True)
+    lock_id = models.CharField(max_length=191, unique=True)
     creation_time = models.DateTimeField(auto_now_add=True)
 
     class Meta:
