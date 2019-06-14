@@ -9,7 +9,8 @@ following way:
 
 .. code-block:: python
 
-    from db_mutex import db_mutex, DBMutexError, DBMutexTimeoutError
+    from db_mutex import DBMutexError, DBMutexTimeoutError
+    from db_mutex.db_mutex import db_mutex
 
     # Lock a critical section of code
     try:
@@ -30,7 +31,8 @@ The db_mutex decorator can also be used in a similar manner for locking a functi
 
 .. code-block:: python
 
-    from db_mutex import db_mutex, DBMutexError, DBMutexTimeoutError
+    from db_mutex import DBMutexError, DBMutexTimeoutError
+    from db_mutex.db_mutex import db_mutex
 
     @db_mutex('lock_id')
     def critical_function():
@@ -67,6 +69,8 @@ Django DB Mutex can be used with celery's tasks in the following manner:
 
 .. code-block:: python
 
+    from db_mutex import DBMutexError, DBMutexTimeoutError
+    from db_mutex.db_mutex import db_mutex
     from abc import ABCMeta
     from celery import Task
 
